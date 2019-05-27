@@ -9,6 +9,8 @@ class PostController {
         console.log(req.session);
         res.locals.text = "Hello world";
         Post.find({}).then(results => {
+            res.locals.posts = results;
+            
             res.render("index");
         });
     }

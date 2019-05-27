@@ -5,7 +5,8 @@ const Post = mongoose.model('Post', {
     title: String,
     content: String,
     thumb: String,
-    category: { type: Schema.Types.ObjectId, ref: 'Category'}
+    category: String
+    // category: { type: Schema.Types.ObjectId, ref: 'Category'}
 });
 
 module.exports = Post;
